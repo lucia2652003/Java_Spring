@@ -1,0 +1,82 @@
+{
+	"info": {
+		"_postman_id": "e428c868-89a3-4593-9c82-de184e2da4c0",
+		"name": "Carreras Autos",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "41654976"
+	},
+	"item": [
+		{
+			"name": "Mostrar Equipos",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "localhost:8080/equipos/traer"
+			},
+			"response": []
+		},
+		{
+			"name": "Buscar Equipo",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "localhost:8080/equipos/traer/Ferrari"
+			},
+			"response": []
+		},
+		{
+			"name": "Mostrar Pilotos",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "localhost:8080/pilotos/traer"
+			},
+			"response": []
+		},
+		{
+			"name": "Buscar Pilotos Equipo",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "localhost:8080/pilotos/traer/Ferrari"
+			},
+			"response": []
+		},
+		{
+			"name": "Agregar Equipo",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nombreEquipo\": \"Ford\",\r\n    \"pais\": \"Italia\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "localhost:8080/equipos/agregar"
+			},
+			"response": []
+		},
+		{
+			"name": "Agregar Piloto",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": " {\r\n    \"nombrePiloto\": \"Noelia\",\r\n    \"apellidoPiloto\": \"Perez\",\r\n    \"edad\": 58,\r\n    \"nacionalidad\": \"España\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "localhost:8080/pilotos/agregar"
+			},
+			"response": []
+		}
+	]
+}

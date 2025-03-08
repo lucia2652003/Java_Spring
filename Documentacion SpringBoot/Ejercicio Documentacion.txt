@@ -1,0 +1,30 @@
+ Actores: Enumera los actores principales que interactúan con el sistema.
+
+- Ciudadano
+- Profesional
+
+ Flujo Principal: Explica paso a paso cómo se solicita un turno desde el tótem.
+
+1. Debe solicitar una sesión el ciudadano
+
+2. Crear turnos
+
+3. Buscar turnos por nombre o numero Turno
+
+4. Eliminar turnos
+
+5. Como profesional puede ver los turnos con el ciudadano correspondiente
+
+
+Flujos Alternativos: Indica posibles variaciones del proceso, como falta de disponibilidad o cancelación.
+
+1. Si el numero de Turno ya existe me manda un error
+
+2. Si no existe el usuario que cree la cuenta
+
+
+Reglas de Negocio: Define restricciones o validaciones que el sistema debe cumplir.
+
+1. Ciudadanos únicos
+
+ Entidades Principales: Lista las principales clases o tablas necesarias con sus atributos clave.

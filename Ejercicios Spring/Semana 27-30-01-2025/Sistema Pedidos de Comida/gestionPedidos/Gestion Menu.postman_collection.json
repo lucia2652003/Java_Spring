@@ -1,0 +1,79 @@
+{
+	"info": {
+		"_postman_id": "3f929c60-9766-452c-9c2c-2a1940d84df4",
+		"name": "Gestion Menu",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "41654976"
+	},
+	"item": [
+		{
+			"name": "Buscar menu por categoria GET",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/menu?tipoMenu=vegetariano",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"menu"
+					],
+					"query": [
+						{
+							"key": "tipoMenu",
+							"value": "vegetariano"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Buscar pedido GET",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "localhost:8080/pedido/1"
+			},
+			"response": []
+		},
+		{
+			"name": "Creación del plato",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\t\"nombre\": \"Plato Vegetariano #4\",\r\n\t\"descripcion\": \"Ensalada camprese\",\r\n\t\"precio\": 7.15,\r\n    \"tipoMenu\": \"vegetariano\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "localhost:8080/menu/agregar"
+			},
+			"response": []
+		},
+		{
+			"name": "Agregar pedido POST",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"nombre\": \"Mesa 1\",\r\n  \"pedidos\":[\r\n    {\"id\":1},\r\n    {\"id\":4}\r\n  ] \r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "localhost:8080/pedido/agregar"
+			},
+			"response": []
+		}
+	]
+}

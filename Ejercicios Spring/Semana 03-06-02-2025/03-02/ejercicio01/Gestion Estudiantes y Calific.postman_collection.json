@@ -1,0 +1,37 @@
+{
+	"info": {
+		"_postman_id": "281444dd-8434-4d7a-a6dc-fb8c4efc44e3",
+		"name": "Gestion Estudiantes y Calific",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "41654976"
+	},
+	"item": [
+		{
+			"name": "Mostrar estudiantes",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "localhost:8080/estudiantes"
+			},
+			"response": []
+		},
+		{
+			"name": "Mostrar calificacion",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "localhost:8080/calificaciones/12815"
+			},
+			"response": []
+		},
+		{
+			"name": "Mostrar calificaciones DESC",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "localhost:8080/calificaciones/ordendesc"
+			},
+			"response": []
+		}
+	]
+}

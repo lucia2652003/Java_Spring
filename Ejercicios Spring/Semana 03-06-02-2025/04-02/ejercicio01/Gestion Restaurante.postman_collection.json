@@ -1,0 +1,19 @@
+{
+	"info": {
+		"_postman_id": "fd9d7c38-b2ea-4868-9724-6b7287235357",
+		"name": "Gestion Restaurante",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "41654976"
+	},
+	"item": [
+		{
+			"name": "Buscar Plato",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "localhost:8080/restaurante/Hamburguesa vegana"
+			},
+			"response": []
+		}
+	]
+}

@@ -1,0 +1,80 @@
+{
+	"info": {
+		"_postman_id": "029c2062-eaec-4e13-a546-ec14fb40603d",
+		"name": "Gestion Clientes",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "41654976"
+	},
+	"item": [
+		{
+			"name": "Mostrar Clientes",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "localhost:8080/clientes"
+			},
+			"response": []
+		},
+		{
+			"name": "Crear Cliente",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": {
+						"password": "x845fg4",
+						"username": "drax182"
+					}
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nacion\": \"Suecia\",\r\n    \"correo\": \"susan@gmail.com\",\r\n    \"nombre\": \"Sosan\",\r\n    \"primerApellido\": \"Lamas\",\r\n    \"DNI\": \"182155452D\",\r\n    \"telefono\": 639215881\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "localhost:8080/clientes/agregar"
+			},
+			"response": []
+		},
+		{
+			"name": "Actualizar Cliente",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nacion\": \"Suecia\",\r\n    \"correo\": \"susan@gmail.com\",\r\n    \"nombre\": \"Susan\",\r\n    \"primerApellido\": \"Lamas\",\r\n    \"DNI\": \"182155452D\",\r\n    \"telefono\": 639215881\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "localhost:8080/clientes/7"
+			},
+			"response": []
+		},
+		{
+			"name": "Eliminar Cliente",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": "localhost:8080/clientes/1"
+			},
+			"response": []
+		},
+		{
+			"name": "Buscar Cliente",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "localhost:8080/clientes/6"
+			},
+			"response": []
+		}
+	]
+}

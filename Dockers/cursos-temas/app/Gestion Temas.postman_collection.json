@@ -1,0 +1,87 @@
+{
+	"info": {
+		"_postman_id": "af35d6b6-75d7-4530-a471-ec2a5b215b84",
+		"name": "Gestion Temas",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "41654976"
+	},
+	"item": [
+		{
+			"name": "Mostrar Temas",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "localhost:8080/temas"
+			},
+			"response": []
+		},
+		{
+			"name": "Crear Tema",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": {
+						"password": "1234",
+						"username": "admin"
+					}
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n   \"titulo\": \"Estrellas de mar\",\r\n   \"comentario\": \"Como se formaron las estrellas de mar\",  \r\n   \"codigoCurso\": 2\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "localhost:8080/temas/agregar"
+			},
+			"response": []
+		},
+		{
+			"name": "Actualizar Tema",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n   \"titulo\": \"Patrones Comportamiento\",\r\n   \"comentario\": \"Iterator y Observer\",  \r\n   \"codigoCurso\": 4\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "localhost:8080/temas/4"
+			},
+			"response": []
+		},
+		{
+			"name": "Mostrar Temas por Curso",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/temasCurso/filtrar?nombreCurso=Java Basico",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"temasCurso",
+						"filtrar"
+					],
+					"query": [
+						{
+							"key": "nombreCurso",
+							"value": "Java Basico"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

@@ -1,0 +1,94 @@
+{
+	"info": {
+		"_postman_id": "d614b8e5-e29b-4907-ac92-76db413093a8",
+		"name": "Gestion Cursos",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "41654976"
+	},
+	"item": [
+		{
+			"name": "Mostrar Cursos",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "localhost:8080/cursos"
+			},
+			"response": []
+		},
+		{
+			"name": "Crear Curso",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nombreCurso\": \"Biologia marina\",\r\n    \"tipoCurso\": \"BASICO\",\r\n    \"fechaFinal\": \"2025-01-12\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "localhost:8080/cursos/agregar"
+			},
+			"response": []
+		},
+		{
+			"name": "Mostrar Cursos Nombre",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": {
+						"username": "admin",
+						"password": "1234"
+					}
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/cursos/filtrarNombreCurso?nombre=Java",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"cursos",
+						"filtrarNombreCurso"
+					],
+					"query": [
+						{
+							"key": "nombre",
+							"value": "Java"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Actualizar Curso",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": {
+						"password": "1234",
+						"username": "admin"
+					}
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nombreCurso\": \"Buenas practicas Java\",\r\n    \"tipoCurso\": \"MEDIO\",\r\n    \"fechaFinalizacion\": \"2025-01-09\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "localhost:8080/cursos/4"
+			},
+			"response": []
+		}
+	]
+}

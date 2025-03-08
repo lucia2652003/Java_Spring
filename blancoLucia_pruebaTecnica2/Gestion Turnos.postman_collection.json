@@ -1,0 +1,186 @@
+{
+	"info": {
+		"_postman_id": "5c0c4ab9-b997-4c0d-875b-c84af9adb7db",
+		"name": "Gestion Turnos",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "41654976"
+	},
+	"item": [
+		{
+			"name": "Mostrar Ciudadanos",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "localhost:8080/ciudadanos"
+			},
+			"response": []
+		},
+		{
+			"name": "Agregar Ciudadano",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"primerNombre\": \"Pablo\",\r\n    \"primerApellido\": \"Pomez\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "localhost:8080/ciudadanos"
+			},
+			"response": []
+		},
+		{
+			"name": "Buscar Ciudadano",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "localhost:8080/ciudadanos/3"
+			},
+			"response": []
+		},
+		{
+			"name": "Actualizar Ciudadano",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n   \"primerNombre\": \"Pablo\",\r\n   \"primerApellido\": \"Otero\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "localhost:8080/ciudadanos/3"
+			},
+			"response": []
+		},
+		{
+			"name": "Eliminar Ciudadano",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": "localhost:8080/ciudadanos/2"
+			},
+			"response": []
+		},
+		{
+			"name": "Mostrar Turnos",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "localhost:8080/turnos"
+			},
+			"response": []
+		},
+		{
+			"name": "Agregar Turnos",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"codigoTurno\": 69,\r\n    \"fechaTurno\": \"2025-06-02\",\r\n    \"nombreTurno\": \"MEDICA\",\r\n    \"estadoTurno\": \"ESPERA\",\r\n    \"codiCiudadano\": 1\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "localhost:8080/turnos"
+			},
+			"response": []
+		},
+		{
+			"name": "Buscar Turno",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "localhost:8080/turnos/1"
+			},
+			"response": []
+		},
+		{
+			"name": "Actualizar Turno",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"codigoTurno\": 28,\r\n    \"fechaTurno\": \"2025-05-26\",\r\n    \"nombreTurno\": \"NUTRICIONISTA\",\r\n    \"estadoTurno\": \"ESPERA\",\r\n    \"codiCiudadano\": 1\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "localhost:8080/turnos/1"
+			},
+			"response": []
+		},
+		{
+			"name": "Eliminar Turno",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": "localhost:8080/turnos/1"
+			},
+			"response": []
+		},
+		{
+			"name": "Mostrar Turnos Ciudadano",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "localhost:8080/listadoTurnos"
+			},
+			"response": []
+		},
+		{
+			"name": "Turnos filtrados",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/listadoTurnos/filtro?fecha=2025-02-05&estado=ATENDIDO",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"listadoTurnos",
+						"filtro"
+					],
+					"query": [
+						{
+							"key": "fecha",
+							"value": "2025-02-05"
+						},
+						{
+							"key": "estado",
+							"value": "ATENDIDO"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

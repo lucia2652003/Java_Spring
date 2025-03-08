@@ -1,0 +1,109 @@
+{
+	"info": {
+		"_postman_id": "037853aa-b865-4482-a744-a912128a47bd",
+		"name": "Gestion Reservas",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "41654976"
+	},
+	"item": [
+		{
+			"name": "Mostrar Reservas",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "localhost:8080/reservas"
+			},
+			"response": []
+		},
+		{
+			"name": "Crear Reserva",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": {
+						"password": "x845fg4",
+						"username": "drax182"
+					}
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"fechaInicio\": \"2025-08-20T23:58:35\",\r\n  \"fechaFin\": \"2025-09-01T10:35:12\",\r\n  \"numHabitacion\": 12,\r\n  \"clienteId\": {\r\n        \"codigoCliente\" : 2\r\n   } \r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "localhost:8080/reservas/agregar"
+			},
+			"response": []
+		},
+		{
+			"name": "Mostrar Reservas por Fechas Inicio y Fin",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/reservas/filtrar?fechaInicio=2025-02-19T08:30:00&fechaFin=2025-04-10T17:25:00",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"reservas",
+						"filtrar"
+					],
+					"query": [
+						{
+							"key": "fechaInicio",
+							"value": "2025-02-19T08:30:00"
+						},
+						{
+							"key": "fechaFin",
+							"value": "2025-04-10T17:25:00"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Actualizar Reserva",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"fechaInicio\": \"2025-08-20T23:58:35\",\r\n  \"fechaFin\": \"2025-09-01T10:35:12\",\r\n  \"numHabitacion\": 3, \r\n  \"clienteId\": {\r\n        \"codigoCliente\" : 6\r\n  } \r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "localhost:8080/reservas/6"
+			},
+			"response": []
+		},
+		{
+			"name": "Buscar Reserva",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "localhost:8080/reservas/5"
+			},
+			"response": []
+		},
+		{
+			"name": "Eliminar Reserva",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": "localhost:8080/reservas/1"
+			},
+			"response": []
+		}
+	]
+}
